@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CloudNote Lite</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="manifest" href="manifest.json">
+
+<meta name="theme-color" content="#2563eb">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div id="loading">
+
+<div class="spinner"></div>
+
+<p>Memuat CloudNote...</p>
+
+</div>
+
+<section id="loginPage">
+
+<div class="loginCard">
+
+<h1>☁ CloudNote Lite</h1>
+
+<p>
+
+Catatan online yang ringan,
+aman dan sinkron.
+
+</p>
+
+<input
+id="roomInput"
+placeholder="Nama Ruang">
+
+<input
+id="pinInput"
+type="password"
+maxlength="6"
+placeholder="PIN">
+
+<button id="loginBtn">
+
+Masuk
+
+</button>
+
+</div>
+
+</section>
+
+<section id="homePage" class="hidden">
+
+<header>
+
+<div>
+
+<h2>
+
+CloudNote
+
+</h2>
+
+<small id="roomLabel">
+
+-
+
+</small>
+
+</div>
+
+<div>
+
+<button id="themeBtn">
+
+🌙
+
+</button>
+
+</div>
+
+</header>
+
+<div class="searchBox">
+
+<input
+
+id="searchInput"
+
+placeholder="Cari catatan...">
+
+</div>
+
+<div id="noteList">
+
+</div>
+
+<button id="addBtn">
+
++
+
+</button>
+
+</section>
+
+<div id="editor" class="hidden">
+
+<div class="editorCard">
+
+<input
+
+id="titleInput"
+
+placeholder="Judul">
+
+<textarea
+
+id="contentInput"
+
+placeholder="Isi catatan...">
+
+</textarea>
+
+<div class="editorAction">
+
+<button id="cancelBtn">
+
+Batal
+
+</button>
+
+<button id="saveBtn">
+
+Simpan
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<script type="module" src="firebase.js"></script>
+
+<script type="module" src="app.js"></script>
+
+</body>
+
+</html>
