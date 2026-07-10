@@ -3,17 +3,21 @@
 // Firebase Config
 // ===============================
 
-import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
-
 import {
-getFirestore
+  getFirestore,
+  collection,
+  doc,
+  getDoc,
+  setDoc,
+  addDoc,
+  updateDoc,
+  deleteDoc,
+  onSnapshot,
+  query,
+  where,
+  orderBy,
+  serverTimestamp
 } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
-
-import {
-getAuth,
-signInAnonymously
-} from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
-
 
 // ===============================
 // GANTI DENGAN FIREBASE CONFIG
@@ -52,9 +56,18 @@ console.error(err);
 });
 
 export {
-
-db,
-
-auth
-
+  db,
+  auth,
+  collection,
+  doc,
+  getDoc,
+  setDoc,
+  addDoc,
+  updateDoc,
+  deleteDoc,
+  onSnapshot,
+  query,
+  where,
+  orderBy,
+  serverTimestamp
 };
