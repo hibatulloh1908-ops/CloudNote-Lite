@@ -1,58 +1,102 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
 <title>CloudNote Lite</title>
 
-<link rel="stylesheet" href="style.css">
-
-<link rel="manifest" href="manifest.json">
-
 <meta name="theme-color" content="#2563eb">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+rel="manifest"
+href="manifest.json">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link
+rel="stylesheet"
+href="style.css">
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+rel="stylesheet">
 
 </head>
 
 <body>
 
-<div id="loading">
+<!-- LOADING -->
 
-<div class="spinner"></div>
+<div id="loadingPage">
 
-<p>Memuat CloudNote...</p>
-
-</div>
-
-<section id="loginPage">
-
-<div class="loginCard">
-
-<h1>☁ CloudNote Lite</h1>
+<div class="loader"></div>
 
 <p>
 
-Catatan online yang ringan,
-aman dan sinkron.
+Memuat CloudNote...
+
+</p>
+
+</div>
+
+<!-- LOGIN -->
+
+<section
+id="loginPage"
+class="page">
+
+<div class="loginCard">
+
+<div class="logo">
+
+☁
+
+</div>
+
+<h1>
+
+CloudNote Lite
+
+</h1>
+
+<p>
+
+Catatan Online
+Ringan &
+Sinkron
 
 </p>
 
 <input
+
 id="roomInput"
+
+type="text"
+
 placeholder="Nama Ruang">
 
 <input
+
 id="pinInput"
+
 type="password"
+
 maxlength="6"
+
 placeholder="PIN">
 
-<button id="loginBtn">
+<button
+
+id="loginBtn">
 
 Masuk
 
@@ -62,7 +106,13 @@ Masuk
 
 </section>
 
-<section id="homePage" class="hidden">
+<!-- HOME -->
+
+<section
+
+id="homePage"
+
+class="page hidden">
 
 <header>
 
@@ -70,11 +120,13 @@ Masuk
 
 <h2>
 
-CloudNote
+☁ CloudNote
 
 </h2>
 
-<small id="roomLabel">
+<small
+
+id="roomLabel">
 
 -
 
@@ -84,7 +136,9 @@ CloudNote
 
 <div>
 
-<button id="themeBtn">
+<button
+
+id="themeBtn">
 
 🌙
 
@@ -94,7 +148,7 @@ CloudNote
 
 </header>
 
-<div class="searchBox">
+<div class="searchArea">
 
 <input
 
@@ -104,11 +158,17 @@ placeholder="Cari catatan...">
 
 </div>
 
-<div id="noteList">
+<div
+
+id="noteContainer">
+
+<!-- nanti javascript -->
 
 </div>
 
-<button id="addBtn">
+<button
+
+id="addBtn">
 
 +
 
@@ -116,9 +176,23 @@ placeholder="Cari catatan...">
 
 </section>
 
-<div id="editor" class="hidden">
+<!-- EDITOR -->
 
-<div class="editorCard">
+<section
+
+id="editorPage"
+
+class="hidden">
+
+<div
+
+class="editorCard">
+
+<h2>
+
+Catatan
+
+</h2>
 
 <input
 
@@ -134,15 +208,19 @@ placeholder="Isi catatan...">
 
 </textarea>
 
-<div class="editorAction">
+<div class="editorButton">
 
-<button id="cancelBtn">
+<button
+
+id="cancelBtn">
 
 Batal
 
 </button>
 
-<button id="saveBtn">
+<button
+
+id="saveBtn">
 
 Simpan
 
@@ -152,12 +230,8 @@ Simpan
 
 </div>
 
-</div>
+</section>
 
-<script type="module" src="firebase.js"></script>
-
-<script type="module" src="app.js"></script>
-
-</body>
-
-</html>
+<script
+type="module"
+src="
